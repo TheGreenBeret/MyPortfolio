@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.anaBaslik {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/03/blue_brown_background_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+#header-1 {
+    font-size: 2.5rem;
+    font-family: 'Anton', sans-serif;
+    border: 5px double black;
+    border-radius: 10px;
+}
+.middlePart {
+    display: flex;
+    align-content: center;
+    background-image: url(https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?cs=srgb&dl=pexels-pixabay-235985.jpg&fm=jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.rightSide {
+    display: flex;
+    justify-content: center;  
+    width: 50%;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    /* 5px rounded corners */
+}
+.card img{
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  /* Add some padding inside the card container */
+.container {
+    display: flex;
+    padding: 2px 16px;
+  }
+/* Add rounded corners to the top left and the top right corner of the image */
+#name{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+#unvan{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.leftSide{ 
+    border: 5px solid black;
+    border-radius: 5px;
+}
+.leftSide h2{
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 8px 8px 8px rgb(43, 57, 5);
+}
+.leftSide p{
+    font-size: 2rem;
+    font-family: 'Caveat', cursive;
+}
+.resume{
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url(https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?cs=srgb&dl=pexels-pixabay-235985.jpg&fm=jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color:transparent;
+    color: black;
+    font-family: 'Caveat', cursive;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: transparent;
+    color:black;
+    font-family: 'Caveat', cursive;
+    transform: rotateY(180deg);
+  }
+
+.bottom{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/03/blue_brown_background_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lists{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+}
+#lists li a{
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+@media screen and (max-width:576px) {
+    .anaBaslik{
+        width: auto;
+        height: auto;
+        box-sizing: border-box;
+    }
+    #header-1{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .middlePart{
+        flex-direction: column;
+    }
+    .rightSide{
+        width: auto;
+    }
+    .leftSide{
+        width: auto;
+    }
+    .resume{
+        flex-wrap: wrap;
+    }
+    .bottom{
+        height: auto;
+    }
+    #lists{
+        width: auto;
+        display: block;
+    }
+    #lists li a{
+        font-size: 25px;
+    }
+}
+@media screen and (min-width:768px) {
+    .resume{
+        flex-wrap: wrap;
+    }
+}
